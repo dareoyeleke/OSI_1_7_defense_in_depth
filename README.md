@@ -1,24 +1,33 @@
 # OSI_1_7_defense_in_depth
- Cybersecurity & Defense-in-Depth Project
+Defense in Depth – OSI Layer Security Implementation
 
-Independent Security Implementation | Remote | 2024 – Present
+Tools & Technologies: BitLocker, Command Prompt, Tailscale, Windows Defender, FlowCrypt, Thunderbird, Atcalis S/MIME, Google Cloud DLP, Python, PowerShell
 
-Key Tools & Technologies: BitLocker, TPM, Tailscale, Windows Defender, PGP/SMIME, Google Cloud DLP, Python, VS Code, BitDefender 
+Project Type: Cybersecurity Configuration & System Hardening
 
-Highlights:
+Description:
+Designed and implemented a multi-layered Defense in Depth security architecture mapped to OSI Layers 1–7, incorporating encryption, endpoint protection, and data loss prevention to safeguard system and data integrity.
 
-Designed and implemented a multi-layered security framework across OSI layers 1–7, incorporating network, endpoint, and application security controls.
+Key Achievements:
 
-Configured full disk encryption on internal and external drives using BitLocker, TPM, and high-complexity PINs, ensuring secure storage of sensitive data.
+Full Disk Encryption (Layers 1, 6 & 7):
+Configured BitLocker via Command Prompt with TPM + PIN authentication and firmware-level security. Implemented high-complexity passwords for external drives, with recovery keys securely stored in offline environments.
 
-Secured multi-device network using Tailscale VPN, enabling encrypted communication across phone, tablet, and desktop with MagicDNS, HTTPS certificates, and restricted LAN access.
+Network Security with Tailscale (Layer 3):
+Established encrypted connections across phone, tablet, and desktop using desktop as an exit node. Configured DNS filtering (Quad9 & Cloudflare), MagicDNS, HTTPS certificates, key expiry, and LAN isolation to reinforce zero-trust principles.
 
-Implemented Windows Defender policies including firewall rules, scheduled scans, and automated logout for public/private/domain networks.
+System & Firewall Protection (Layers 3, 4 & 7):
+Hardened Windows Defender Firewall to allow only encrypted traffic on public, private, and domain networks, with automated weekly full scans via Task Scheduler.
 
-Applied email encryption protocols (PGP via FlowCrypt and S/MIME via Atcalis) with RSA 4096-bit keys for end-to-end protection.
+Email Encryption (Layer 6):
+Implemented end-to-end encryption across Gmail, Yahoo, and Apple Mail using PGP (FlowCrypt, Thunderbird) and S/MIME (Atcalis) with RSA 4096-bit keys.
+Managed secure key distribution and backup for cross-device encrypted email communication.
 
-Developed Data Loss Prevention scripts in Python to scan for PII and sensitive data, alerting for potential breaches in datasets and code repositories.
+Data Loss Prevention (Layers 6 & 7):
+Integrated Google Cloud DLP to detect and alert on PII exposure in Python scripts and SQL queries using custom REGEX and OS module scanning automation in VS Code and Jupyter Notebook.
 
-Managed key lifecycle, certificate management, and secure storage for all encryption and authentication assets.
+Access Control:
+Configured idle session timeouts and automatic logoff protocols with pre-termination warnings to prevent unauthorized access.
 
-Implemented MDM security controls to prevent social engineering through spam messages, calls, App Lock and Antitheft controls. 
+Impact:
+Established a robust multi-layer cybersecurity defense system securing data at the network, application, and endpoint levels, significantly reducing risk of data exposure or unauthorized access.
