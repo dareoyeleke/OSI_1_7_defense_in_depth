@@ -1,7 +1,7 @@
 # OSI_1_through_7_defense_in_depth
-# Defense in Depth – OSI Layer Security Implementation
+# 🛡️ Defense in Depth – OSI Layer Security Implementation
 
-### Tools & Technologies: BitLocker, Command Prompt, Tailscale, Windows Defender, FlowCrypt, Thunderbird, Atcalis S/MIME, Google Cloud DLP, Python, PowerShell
+### 🧰 Tools & Technologies: BitLocker, Command Prompt, Tailscale, Windows Defender, FlowCrypt, Thunderbird, Atcalis S/MIME, Google Cloud DLP, Python, PowerShell
 
 ### Project Type: Cybersecurity Configuration & System Hardening with visual depiction 
 
@@ -57,7 +57,7 @@ Security measures with CPU microcode, UEFI / BIOS security focusing on trusted f
 ### Impact:
 ```
 Established a robust multi-layer cybersecurity defense system securing data at the network, application, and endpoint levels,
-significantly reducing risk of data exposure or unauthorized access.
+significantly reducing risk of data exposure or unauthorized access. 🛡️
 ```
 
 <img width="1024" height="1536" alt="ChatGPT Image Nov 4, 2025, 08_42_44 PM" src="https://github.com/user-attachments/assets/89614fdf-94ab-4fa8-8e3b-3bc217946608" />
