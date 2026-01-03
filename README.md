@@ -107,6 +107,8 @@ Evidence artifacts are stored in:
 -  /evidence/
     └── screenshots/
 -    Validated controls include full disk encryption for system and external drives with TPM-backed key protection.
+-    Validated controls include encrypted VPN sessions with an active exit node and DNS-layer threat filtering via Quad9.
+
 
 This repo emphasizes verifiable security, not just configuration claims.
 
