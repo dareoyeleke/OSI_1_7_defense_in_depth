@@ -14,13 +14,12 @@ Application-level data protection, malware prevention, and user-facing security 
 - Real-time malware detection
 - Scheduled scans and signature updates
 - Application-level threat prevention
-
-### Secure Email Clients
-- Thunderbird as primary email client
-- Integrated encryption tools for secure communication
-
- PGP key pair configured and active for end-to-end email encryption and signing  
-  (see `evidence/screenshots/flowcrypt-pgp-key-configured.png`)
+- 
+### Secure Email Applications
+- Secure email workflows implemented using FlowCrypt (webmail) and Thunderbird
+- Application-level controls enforce encrypted content handling and signing
+- Cryptographic enforcement is handled at the Presentation layer
+(See Layer 6 for encryption and key management details)
 
 ## Risks Addressed
 - Malware execution
