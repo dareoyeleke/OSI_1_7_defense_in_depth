@@ -8,118 +8,125 @@ This repository documents a defense-in-depth security baseline for a single-user
 
 The goal is not enterprise-scale security, but a practical, auditable, and layered security posture suitable for:
 
--  Data professionals handling sensitive datasets
+- Data professionals handling sensitive datasets  
+- Analytics work in regulated environments (healthcare, finance, compliance)  
+- Individuals seeking to understand security as a system, not a toolset  
 
--  Analytics work in regulated environments (healthcare, finance, compliance)
+---
 
--  Individuals seeking to understand security as a system, not a toolset
+## Why Defense-in-Depth
 
-### Why Defense-in-Depth
+Security failures rarely occur because a single tool fails.  
+They occur because one layer is trusted too much.
 
-Security failures rarely occur because a single tool failed.
-They occur because one layer was trusted too much.
+This project demonstrates how overlapping controls:
 
-### This project demonstrates how overlapping controls:
+- Reduce blast radius  
+- Limit lateral movement  
+- Improve detection and recovery  
+- Enforce least privilege across hardware, network, application, and user layers  
 
--  Reduce blast radius
+---
 
--  Limit lateral movement
+## Threat Model (High-Level)
 
--  Improve detection and recovery
+This section answers a single question:
 
--  Enforce least privilege across hardware, network, application, and user layers
-
-### Threat Model (High-Level)
-
-This section answers: “What are we defending against?”
-Everything below exists because of these threats.
+**What are we defending against, and why were these controls chosen?**
 
 ### In Scope
 
--  Credential compromise (phishing, password reuse)
-
--  Malware execution and persistence
-
--  Accidental or malicious data leakage
-
--  Network interception on untrusted Wi-Fi
-
--  Device loss or theft
-
--  Unauthorized access to sensitive analytics data
+- Credential compromise (phishing, password reuse)
+- Malware execution and persistence
+- Accidental or malicious data leakage
+- Network interception on untrusted Wi-Fi
+- Device loss or theft
+- Unauthorized access to sensitive analytics data
 
 ### Out of Scope
 
--  Enterprise SOC operations
+- Enterprise SOC operations
+- Advanced nation-state threats
+- Zero-day exploitation
+- Large multi-user or cloud infrastructure
 
--  Advanced nation-state threats
+### Assumptions & Design Constraints
 
--  Zero-day exploitation
+- The system is operated by a single trusted user
+- Administrative access is available for system configuration
+- Firmware and OS are assumed uncompromised at initial setup
+- Confidentiality is prioritized over high availability
+- Controls must not significantly disrupt daily analytics workflows
 
--  Large multi-user infrastructure
+📄 Detailed scope, assumptions, and tradeoffs are documented in:  
+`/docs/00_scope_threat_model.md`
 
-### 📄 Detailed assumptions and tradeoffs are documented in
--  /docs/00_scope_threat_model.md
+---
 
-### OSI Control Mapping Overview
+## OSI Control Mapping Overview
 
-Controls are implemented and validated at each OSI layer, ensuring no single failure compromises the system.
+Controls are implemented across OSI layers to ensure no single failure compromises the system.
 
--  OSI Layer	Focus Area	Example Controls
--  Pre-OSI	Firmware Trust	UEFI / BIOS security, CPU microcode
--  Layer 1	Physical	TPM, Secure Boot
--  Layer 2	Data Link	Encrypted overlay networking
--  Layers 3–4	Network & Transport	Firewall, VPN encryption
--  Layer 5	Session	Encrypted sessions, secure DNS
--  Layer 6	Presentation	Disk & email encryption
--  Layer 7	Application	DLP, malware detection, secure email
+| OSI Layer | Focus Area | Example Controls |
+|---------|------------|------------------|
+| Pre-OSI | Firmware Trust | UEFI/BIOS security, CPU microcode |
+| Layer 1 | Physical | TPM, Secure Boot |
+| Layer 2 | Data Link | Encrypted overlay networking |
+| Layers 3–4 | Network & Transport | Firewall rules, VPN encryption |
+| Layer 5 | Session | Encrypted sessions, secure DNS |
+| Layer 6 | Presentation | Disk encryption, email encryption |
+| Layer 7 | Application | DLP, malware detection, secure email clients |
 
-### 📁 Full control documentation lives in /controls/.
+📁 Full control documentation lives in `/controls/`.
 
-### Control Documentation Structure
+---
 
-### Each OSI layer is documented using a consistent, auditable format:
+## Control Documentation Structure
 
--  Risk Addressed
+Each OSI layer is documented using a consistent, auditable format:
 
--  Controls Implemented
+- Risk Addressed  
+- Controls Implemented  
+- Implementation Summary  
+- Validation Approach  
+- Evidence (where applicable)  
 
--  Implementation Summary
+This ensures the system can be reviewed, extended, or audited without relying on tribal knowledge.
 
--  Validation Approach
+---
 
--  Evidence (where applicable)
+## Validation & Evidence
 
-This ensures the project can be reviewed, extended, or audited without relying on tribal knowledge.
+Controls are validated using:
 
-### Validation & Evidence
+- System configuration screenshots  
+- Command-line verification outputs  
+- Tool status indicators  
 
-Where applicable, controls are validated using:
+Evidence artifacts are stored under:
 
--  System configuration screenshots
+/evidence/
+└── screenshots/
 
--  Command outputs
+yaml
+Copy code
 
--  Tool status indicators
+Validated controls include (non-exhaustive):
 
-Evidence artifacts are stored in:
+- Full disk encryption for system and external drives with TPM-backed key protection
+- Encrypted VPN sessions with an active exit node
+- DNS-layer threat filtering via Quad9
+- End-to-end email encryption using OpenPGP and S/MIME
 
--  /evidence/
-    └── screenshots/
--    Validated controls include full disk encryption for system and external drives with TPM-backed key protection.
--    Validated controls include encrypted VPN sessions with an active exit node and DNS-layer threat filtering via Quad9.
+This repository emphasizes **verifiable security**, not configuration claims.
 
+---
 
-This repo emphasizes verifiable security, not just configuration claims.
-
-### Audience
+## Audience
 
 This project is designed for:
 
--  Data analysts and engineers in regulated domains
-
--  Security-aware analytics professionals
-
--  Junior security engineers building foundational intuition
-
--  Hiring managers evaluating applied security literacy
+- Data analysts and engineers working in regulated domains  
+- Security-aware analytics professionals  
+- Junior security engineers building foundational intuition  
+- Hiring managers evaluating applied security literacy 
