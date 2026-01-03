@@ -28,6 +28,10 @@ Data confidentiality, integrity, and cryptographic protection.
 - Encryption keys protected using hardware-backed TPM  
   (see `evidence/screenshots/tpm-protector-status.png`)
 
+- PGP key pair configured and active for end-to-end email encryption and signing  
+  (see `evidence/screenshots/flowcrypt-pgp-key-configured.png` and 'evidence/screenshots/thunderbird-pgp-key-configured.png')
+
+
 
 ## Risks Addressed
 - Unauthorized access to stored data
