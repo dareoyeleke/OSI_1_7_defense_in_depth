@@ -19,6 +19,9 @@ Application-level data protection, malware prevention, and user-facing security 
 - Thunderbird as primary email client
 - Integrated encryption tools for secure communication
 
+ PGP key pair configured and active for end-to-end email encryption and signing  
+  (see `evidence/screenshots/flowcrypt-pgp-key-configured.png`)
+
 ## Risks Addressed
 - Malware execution
 - Accidental or malicious data leakage
