@@ -14,7 +14,7 @@ Hardware root-of-trust and device integrity.
 - Prevents unauthorized firmware or OS loaders
 
 - TPM-backed key storage used for BitLocker volume protection  
-  (see `evidence/screenshots/tpm-protector-status.png`)
+  (see `evidence/tpm-protector-status.png`)
 
 
 ## Risks Addressed
