@@ -15,3 +15,154 @@ Trusted system startup and firmware integrity.
 
 ## Outcome
 Provides a secure foundation upon which all higher-layer controls depend.
+
+# 🔌 Layer 1 – Physical
+
+## Focus
+Hardware root-of-trust and device integrity.
+
+## Controls Implemented
+
+### Trusted Platform Module (TPM)
+- Hardware-backed key storage
+- Secure cryptographic operations
+
+### Secure Boot
+- Boot chain integrity verification
+- Prevents unauthorized firmware or OS loaders
+
+## Risks Addressed
+- Device theft
+- Boot-level tampering
+- Offline attacks against storage
+
+## Outcome
+Establishes trust at the hardware level before OS execution.
+
+
+# ⚙️ Layer 2 – Data Link
+
+## Focus
+Local network exposure reduction.
+
+## Controls Implemented
+
+### Encrypted Overlay Networking
+- All meaningful traffic encapsulated via Tailscale VPN
+- Prevents reliance on trusted LAN assumptions
+
+## Risks Addressed
+- Local network sniffing
+- Man-in-the-middle attacks on shared networks
+
+## Notes
+Direct Layer 2 controls are minimized due to encrypted overlay architecture.
+
+
+
+# 🌐 Layers 3–4 – Network & Transport
+
+## Focus
+Secure data transport and network traffic control.
+
+## Controls Implemented
+
+### Windows Defender Firewall
+- Inbound and outbound traffic filtering
+- Rule-based network segmentation
+
+### Tailscale (WireGuard)
+- Encrypted transport-layer communication
+- Secure routing over public networks
+
+## Risks Addressed
+- Network interception
+- Unauthorized inbound connections
+- Lateral movement
+
+## Outcome
+Reduces attack surface at the network and transport layers.
+
+
+# 🌐 Layer 5 – Session
+
+## Focus
+Secure session establishment, persistence, and encryption.
+
+## Controls Implemented
+
+### Tailscale (WireGuard VPN)
+- Encrypted device-to-device sessions
+- Identity-based networking
+
+### Encrypted DNS
+- DNS over HTTPS (DoH)
+- DNS over TLS (DoT)
+- Prevents DNS interception and profiling
+
+## Risks Addressed
+- Session hijacking
+- DNS spoofing
+- Traffic inspection on untrusted networks
+
+## Outcome
+Maintains session confidentiality and integrity across networks.
+
+
+# 🔐 Layer 6 – Presentation
+
+## Focus
+Data confidentiality, integrity, and cryptographic protection.
+
+## Controls Implemented
+
+### BitLocker
+- Full disk encryption for data-at-rest
+- TPM-backed key storage
+
+### FlowCrypt (PGP)
+- End-to-end email encryption
+- Protects message content in transit and at rest
+
+### S/MIME
+- Certificate-based email encryption
+- Digital signing for message authenticity
+
+## Risks Addressed
+- Unauthorized access to stored data
+- Email interception or tampering
+- Loss of confidentiality during data exchange
+
+## Outcome
+Ensures data remains protected regardless of transport or storage medium.
+
+
+# 🧠 Layer 7 – Application
+
+## Focus
+Application-level data protection, malware prevention, and user-facing security controls.
+
+## Controls Implemented
+
+### Google Cloud DLP
+- Regex-based content inspection using `re` and `os` modules
+- Detection of sensitive data patterns (PII) in files and scripts
+- Used as a lightweight Data Loss Prevention (DLP) mechanism
+
+### Microsoft Defender
+- Real-time malware detection
+- Scheduled scans and signature updates
+- Application-level threat prevention
+
+### Secure Email Clients
+- Thunderbird as primary email client
+- Integrated encryption tools for secure communication
+
+## Risks Addressed
+- Malware execution
+- Accidental or malicious data leakage
+- Phishing and unsafe email content
+
+## Outcome
+Provides first-line defense where users directly interact with data and applications.
+
