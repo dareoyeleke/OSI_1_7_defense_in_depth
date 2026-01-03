@@ -80,7 +80,7 @@ Controls are implemented and validated at each OSI layer, ensuring no single fai
 
 ### Each OSI layer is documented using a consistent, auditable format:
 
--  isk Addressed
+-  Risk Addressed
 
 -  Controls Implemented
 
