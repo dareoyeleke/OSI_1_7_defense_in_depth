@@ -17,6 +17,18 @@ Data confidentiality, integrity, and cryptographic protection.
 - Certificate-based email encryption
 - Digital signing for message authenticity
 
+## Evidence
+
+- Full disk encryption enabled on system volume using BitLocker  
+  (see `evidence/screenshots/bitlocker-system-drive-status.png`)
+
+- External storage encrypted using BitLocker to protect removable media  
+  (see `evidence/screenshots/bitlocker-external-drive-status.png`)
+
+- Encryption keys protected using hardware-backed TPM  
+  (see `evidence/screenshots/tpm-protector-status.png`)
+
+
 ## Risks Addressed
 - Unauthorized access to stored data
 - Email interception or tampering
