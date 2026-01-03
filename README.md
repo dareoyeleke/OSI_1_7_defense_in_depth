@@ -103,7 +103,6 @@ Controls are validated using:
 Evidence artifacts are stored under:
 
 /evidence/
-└── screenshots/
 
 
 Validated controls include (non-exhaustive):
