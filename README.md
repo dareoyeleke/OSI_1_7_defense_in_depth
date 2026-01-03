@@ -57,10 +57,7 @@ This section answers a single question:
 - Firmware and OS are assumed uncompromised at initial setup
 - Confidentiality is prioritized over high availability
 - Controls must not significantly disrupt daily analytics workflows
-
-📄 Detailed scope, assumptions, and tradeoffs are documented in:  
-`/docs/00_scope_threat_model.md`
-
+  
 ---
 
 ## OSI Control Mapping Overview
@@ -108,8 +105,6 @@ Evidence artifacts are stored under:
 /evidence/
 └── screenshots/
 
-yaml
-Copy code
 
 Validated controls include (non-exhaustive):
 
