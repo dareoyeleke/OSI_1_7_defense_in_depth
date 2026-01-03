@@ -13,6 +13,10 @@ Hardware root-of-trust and device integrity.
 - Boot chain integrity verification
 - Prevents unauthorized firmware or OS loaders
 
+- TPM-backed key storage used for BitLocker volume protection  
+  (see `evidence/screenshots/tpm-protector-status.png`)
+
+
 ## Risks Addressed
 - Device theft
 - Boot-level tampering
