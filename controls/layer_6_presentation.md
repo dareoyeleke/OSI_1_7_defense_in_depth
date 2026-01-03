@@ -11,13 +11,13 @@ Data confidentiality, integrity, and cryptographic protection.
 ## Evidence
 
 - Full disk encryption enabled on system volume using BitLocker  
-  (see `evidence/screenshots/bitlocker-system-drive-status.png`)
+  (see `evidence/bitlocker-system-drive-status.png`)
 
 - External storage encrypted using BitLocker to protect removable media  
-  (see `evidence/screenshots/bitlocker-external-drive-status.png`)
+  (see `evidence/bitlocker-external-drive-status.png`)
 
 - Encryption keys protected using hardware-backed TPM  
-  (see `evidence/screenshots/tpm-protector-status.png`)
+  (see `evidence/tpm-protector-status.png`)
 
 
 ### Email Encryption (PGP / S-MIME)
@@ -27,8 +27,8 @@ Data confidentiality, integrity, and cryptographic protection.
 - Client-side encryption ensures confidentiality and integrity prior to transport
 
 **Evidence**
-- flowcrypt-private-key-passphrase.png
-- thunderbird-encryption-settings.png
+- (see 'evidence/flowcrypt-private-key-passphrase.png')
+- (see 'evidence/thunderbird-encryption-settings.png')
 
 
 ## Risks Addressed
