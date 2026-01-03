@@ -12,7 +12,18 @@ Secure session establishment, persistence, and encryption.
 ### Encrypted DNS
 - DNS over HTTPS (DoH)
 - DNS over TLS (DoT)
-- Prevents DNS interception and profiling
+- Prevents DNS interception and profiling\
+
+## Evidence
+
+- Encrypted device-to-device sessions established using Tailscale (WireGuard VPN), 
+  with a validated active exit node routing traffic securely  
+  (see `evidence/screenshots/tailscale-active-exit-node.png`)
+
+- Encrypted DNS resolution and threat filtering enforced via Quad9 DNS, 
+  confirmed at the client/browser level  
+  (see `evidence/screenshots/quad9-dns-filtering-browser.png`)
+
 
 ## Risks Addressed
 - Session hijacking
