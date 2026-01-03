@@ -13,6 +13,11 @@ Secure data transport and network traffic control.
 - Encrypted transport-layer communication
 - Secure routing over public networks
 
+- Secure transport and routing enforced through WireGuard-based VPN overlay 
+  with centralized exit node  
+  (see `evidence/screenshots/tailscale-active-exit-node.png`)
+
+
 ## Risks Addressed
 - Network interception
 - Unauthorized inbound connections
