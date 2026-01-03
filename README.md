@@ -106,7 +106,7 @@ Evidence artifacts are stored in:
 
 -  /evidence/
     └── screenshots/
-
+-    Validated controls include full disk encryption for system and external drives with TPM-backed key protection.
 
 This repo emphasizes verifiable security, not just configuration claims.
 
